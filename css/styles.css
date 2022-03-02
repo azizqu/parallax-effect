@@ -66,3 +66,13 @@ body, html{
     letter-spacing: 8px;
     text-transform: uppercase;
 }
+
+.ptext .border{
+    background-color: #111;
+    color: ghostwhite;
+    padding: 20px;
+}
+
+.ptext .border.trans{
+    background-color: transparent;
+}
