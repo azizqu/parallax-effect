@@ -62,7 +62,7 @@ body, html{
     width: 100%;
     text-align: center;
     color: ghostwhite;
-    font-size: 27px;
+    font-size: 22px;
     letter-spacing: 8px;
     text-transform: uppercase;
 }
@@ -76,3 +76,10 @@ body, html{
 .ptext .border.trans{
     background-color: transparent;
 }
+
+/*@media (max-width: 568px) {*/
+
+/*    .pimg1, .pimg2, .pimg3 {*/
+/*        background-attachment: fixed;*/
+/*    }*/
+/*}*/
