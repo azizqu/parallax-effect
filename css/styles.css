@@ -70,16 +70,20 @@ body, html{
 .ptext .border{
     background-color: #111;
     color: ghostwhite;
-    padding: 20px;
+    padding: 10px;
 }
 
 .ptext .border.trans{
     background-color: transparent;
 }
 
-/*@media (max-width: 568px) {*/
+@media (max-width: 568px) {
 
-/*    .pimg1, .pimg2, .pimg3 {*/
-/*        background-attachment: fixed;*/
-/*    }*/
-/*}*/
+    .pimg1, .pimg2, .pimg3 {
+        background-attachment: fixed;
+    }
+
+    .ptext .border{
+        padding: 0;
+    }
+}
