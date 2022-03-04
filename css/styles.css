@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    font-size: 4em;
+    /*font-size: 4em;*/
     letter-spacing: 8px;
     color: whitesmoke;
 }
@@ -33,10 +33,30 @@ body {
     align-items: center;
 }
 
-.intro-screen > span{
+.intro-screen > .title{
+    text-align: center;
+    font-size: 3em;
+}
+
+.title{
     background-color: #424242;
+    opacity: 0.70;
     padding: 10px;
 }
+
+.base-layer > .title{
+    font-size: 1.5em;
+
+}
+.base-layer .content{
+    font-size: 1em;
+    letter-spacing: 0;
+    padding: 0.5em;
+    word-wrap: normal;
+
+}
+
+
 
 .outro-screen {
     height: 100vh;
