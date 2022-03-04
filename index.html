@@ -5,80 +5,49 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-    <title> Parallax Example </title>
+    <title> Parallax Demo </title>
 </head>
 <body>
+<div class="parallax-wrapper">
 
-<div class="pimg1">
-    <div class="ptext">
-            <span class="border">
-                Parallax Website
-            </span>
+    <div class="parallax-group intro-screen" id="intro">
+        <span class="title"> Parallax Example Demo </span>
     </div>
-</div>
 
-<section class="section section-light">
-    <h2> Section One </h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci earum eveniet, explicabo fugit harum
-        incidunt iure laboriosam laborum, modi molestiae molestias nulla obcaecati, perspiciatis saepe sed similique
-        sunt voluptates. Accusamus alias aliquam consequatur eaque magnam nam neque sunt vel voluptatem. Accusamus
-        dignissimos dolor doloribus eius error est eum exercitationem ipsum iure labore, magnam nemo, nobis odit
-        perspiciatis provident quia quidem quos sit tempore temporibus ullam veritatis vitae. Culpa eligendi eveniet,
-        exercitationem necessitatibus perspiciatis provident rerum? Alias illum minima quisquam tenetur voluptates?
-        Deleniti distinctio dolorum earum enim eum eveniet iusto laboriosam natus nemo neque nihil porro quae quis
-        repellat, sapiente.
-    </p>
-</section>
-
-<div class="pimg2">
-    <div class="ptext">
-            <span class="border trans">
-                Image Two Text
-            </span>
+    <!--    -->
+    <div class="parallax-group" id="group-1">
+        <div class="parallax-layer base-layer">
+            <span> Base Layer Page Group 1 </span>
+        </div>
+        <div class="parallax-layer mid-layer">
+            Mid Layer Page Group 1
+        </div>
     </div>
-</div>
 
-<section class="section section-dark">
-    <h2> Section Two </h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci earum eveniet, explicabo fugit harum
-        incidunt iure laboriosam laborum, modi molestiae molestias nulla obcaecati, perspiciatis saepe sed similique
-        sunt voluptates. Accusamus alias aliquam consequatur eaque magnam nam neque sunt vel voluptatem. Accusamus
-        dignissimos.
-    </p>
-</section>
-
-<div class="pimg3">
-    <div class="ptext">
-            <span class="border trans">
-                Image Three Text
-            </span>
+    <!-- -->
+    <div class="parallax-group" id="group-2">
+        <div class="parallax-layer mid-layer">
+            Mid Layer Page Group 2
+        </div>
+        <div class="parallax-layer top-layer">
+            Top Layer Page Group 2
+        </div>
     </div>
-</div>
 
-<section class="section section-dark">
-    <h2> Section Three </h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci earum eveniet, explicabo fugit harum
-        incidunt iure laboriosam laborum, modi molestiae molestias nulla obcaecati, perspiciatis saepe sed similique
-        sunt voluptates. Accusamus alias aliquam consequatur eaque magnam nam neque sunt vel voluptatem. Accusamus
-        dignissimos.
-    </p>
-</section>
-
-<div class="pimg1">
-    <div class="ptext">
-            <span class="border">
-                Aziz Qureshi - 2022
-            </span>
+    <div class="parallax-group outro-screen" id="outro">
+        END
     </div>
+
+
+
 </div>
 
 
-<script src="js/scripts.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

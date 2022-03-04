@@ -1,0 +1,77 @@
+.parallax {
+    /*
+    - defining height + perspective locks perspective to centre creating a fixed origin 3D viewport.
+    - overflow-y: auto will allow content inside element to scroll in usual way but descendant elements will be
+        rendered relative to the fixed perspective - thereby creating parallax effect.
+    */
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax-layer {
+
+    /*
+    - parallax-layer defines layer of content where parallax effect will be applied
+    - element is pulled out of content flow and configured to fill space of container.
+    */
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax-layer--base {
+    /*
+    - modifier classes used to determine scrolling speed of a parallax element by translating it on z-axis.
+    */
+    transform: translateZ(0);
+}
+
+.parallax-layer--back {
+    transform: translateZ(-1px) scale(2);
+    background-image: url("../img/image1.jpg");
+}
+
+/*.parallax-group {*/
+
+/*    !**/
+/*    transform-style preserve-3d prevents browser flattening the parallax-layer elements*/
+/*    *!*/
+
+/*    position: relative;*/
+/*    height: 100vh;*/
+/*    transform-style: preserve-3d;*/
+/*}*/
+
+
+/* demo styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font: 100% / 1.5 Ariel;
+}
+
+.parallax{
+    font-size: 200%;
+}
+
+.parallax-layer {
+    /*
+     adding padding to force scrollbars
+    */
+    padding: 100vh 0;
+}
+
+.title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
