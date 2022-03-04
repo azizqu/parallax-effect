@@ -12,6 +12,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 4em;
+    letter-spacing: 8px;
     color: whitesmoke;
 }
 
@@ -25,15 +26,22 @@ body {
 
 .intro-screen {
     height: 100vh;
-    background-color: rgba(7, 162, 220, 0.99);
+    /*background-color: rgba(7, 162, 220, 0.99);*/
+    background-image: url("/img/image6.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.intro-screen > span{
+    background-color: #424242;
+    padding: 1em;
+}
+
 .outro-screen {
     height: 100vh;
-    background-color: rgba(114, 114, 117, 0.99);
+    background-color: rgba(2, 2, 2, 0.99);
+    /*background-image: url("/img/image3.jpg");*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,15 +89,18 @@ body {
     to push group-1 back behind intro so it is not covered
     */
     z-index: -1;
+    width: 102%;
 }
 
 
 #group-1 > .base-layer{
-    background-color: crimson;
+    /*background-color: crimson;*/
+    background-image: url("/img/image5.jpg");
 }
 
 #group-2 > .mid-layer{
-    background-color: teal;
+    /*background-color: teal;*/
+    background-image: url("/img/image3.jpg");
 }
 
 #outro{}
