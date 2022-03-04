@@ -27,7 +27,7 @@ body {
 .intro-screen {
     height: 100vh;
     /*background-color: rgba(7, 162, 220, 0.99);*/
-    background-image: url("/img/image6.jpg");
+    background-image: url("/images/image6.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,12 +95,12 @@ body {
 
 #group-1 > .base-layer{
     /*background-color: crimson;*/
-    background-image: url("/img/image5.jpg");
+    background-image: url("/images/image5.jpg");
 }
 
 #group-2 > .mid-layer{
     /*background-color: teal;*/
-    background-image: url("/img/image3.jpg");
+    background-image: url("/images/image3.jpg");
 }
 
 #outro{}
