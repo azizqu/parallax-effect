@@ -1,89 +1,98 @@
-body, html{
-    height: 100%;
-    margin:0;
-    font-size:16px;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #666;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.pimg1, .pimg2, .pimg3{
+/*@mixin align-center {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 4em;
+    color: whitesmoke;
+}
+
+.parallax-wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* perspective relates to z-axis */
+    perspective: 300px;
+}
+
+.intro-screen {
+    height: 100vh;
+    background-color: rgba(7, 162, 220, 0.99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outro-screen {
+    height: 100vh;
+    background-color: rgba(114, 114, 117, 0.99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-group{
     position: relative;
-    opacity: 0.70;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    /*
-    fixed = parallax effect
-    scroll = normal
-    (parallax may look weird in mobile)
-    */
-
-    background-attachment: fixed;
+    height: 100vh;
+    /* preserve3d makes sure when we give depth (z axis) it maintains the 3d perspective and NOT FLATTEN it */
+    transform-style: preserve-3d;
 }
 
-.pimg1{
-    background-image: url('../img/image1.jpg');
-    min-height: 100%;
-}
-
-.pimg2{
-    background-image: url('../img/image2.jpg');
-    /*background-repeat: no-repeat;*/
-    min-height: 400px;
-
-}
-
-.pimg3{
-    background-image: url('../img/image3.jpg');
-    min-height: 400px;
-}
-
-.section{
-    text-align: center;
-    padding: 50px 80px;
-}
-
-.section-light{
-    background-color: #f4f4f4;
-    color: #666;
-}
-
-.section-dark{
-    background-color: #282e34;
-    color: #ddd;
-}
-
-.ptext{
+.parallax-layer {
     position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: ghostwhite;
-    font-size: 22px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
+    /* inset = top 0,  bottom 0 left 0 right 0*/
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.ptext .border{
-    background-color: #111;
-    color: ghostwhite;
-    padding: 10px;
+.base-layer{
+    /*
+    Scale calculation: 1 + (translateZ * -1) / perspective
+    1 + ((-300 * -1) / - 300) = 2
+    */
+    transform: translateZ(-300px) scale(2);
 }
 
-.ptext .border.trans{
-    background-color: transparent;
+.mid-layer{
+
+    transform: translateZ(0);
 }
 
-@media (max-width: 568px) {
-
-    .pimg1, .pimg2, .pimg3 {
-        background-attachment: fixed;
-    }
-
-    .ptext .border{
-        padding: 0;
-    }
+.top-layer{
+    transform: translateZ(210px) scale(0.3);
 }
+
+#intro{
+    z-index: 0;
+}
+
+#group-1{
+    /*
+    to push group-1 back behind intro so it is not covered
+    */
+    z-index: -1;
+}
+
+
+#group-1 > .base-layer{
+    background-color: crimson;
+}
+
+#group-2 > .mid-layer{
+    background-color: teal;
+}
+
+#outro{}
+
+
+
